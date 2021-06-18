@@ -9,15 +9,31 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>java-spi-demo</artifactId>
-
-  <modules>
-    <module>java-spi-stub</module>
-    <module>java-spi-samsung</module>
-    <module>java-spi-main</module>
-  </modules>
+  <artifactId>java-spi-samsung</artifactId>
 
 
+  <dependencies>
+    <dependency>
+      <groupId>com.orc</groupId>
+      <artifactId>java-spi-stub</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.7.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.orc</groupId>
+      <artifactId>java-spi-main</artifactId>
+      <version>${project.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
@@ -33,6 +49,5 @@
       </plugin>
     </plugins>
   </build>
-
 
 </project>
